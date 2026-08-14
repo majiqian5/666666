@@ -23,7 +23,6 @@ jobs:
         run: |
           sudo xcode-select -s /Applications/Xcode.app
           xcodebuild -version
-          xcodebuild -showsdks | grep iphoneos
 
       - name: Install Theos
         run: |
@@ -32,6 +31,10 @@ jobs:
           echo "THEOS=$THEOS" >> $GITHUB_ENV
           mkdir -p "$THEOS/sdks"
           ln -s "$(xcrun --sdk iphoneos --show-sdk-path)" "$THEOS/sdks/"
+
+      - name: Fix Permissions
+        run: |
+          chmod 0755 layout/DEBIAN/postinst
 
       - name: Build Package
         run: |
