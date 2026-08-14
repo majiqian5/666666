@@ -1,0 +1,9 @@
+Package: com.82flex.cranepkdserverfix
+Name: Crane PKDServer Fix
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Description: Repairs Crane PKDServer discovery on iOS 17.
+Maintainer: 82flex
+Author: 82flex
+Section: Tweaks
+Depends: firmware (>= 17.0), mobilesubstrate, com.opa334.crane
