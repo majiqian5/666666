@@ -1,4 +1,3 @@
-THEOS_PACKAGE_SCHEME := roothide
 TARGET := iphone:clang:16.5:17.0
 ARCHS := arm64
 INSTALL_TARGET_PROCESSES := pkd
